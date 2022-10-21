@@ -47,6 +47,7 @@ class APIManager {
             if error == nil, let parsData = data{
                 do {
                     let employees = try strongSelf.decoder.decode(NameCompany.self, from: parsData)
+                    
                     result = .success(nameCompany: employees)
                     
                 } catch {

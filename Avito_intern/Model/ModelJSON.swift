@@ -7,18 +7,18 @@
 
 // MARK: - Welcome
 struct NameCompany: Codable {
-    let company: Company
+    var company: Company
 }
 
 // MARK: - Company
 struct Company: Codable {
     let name: String
-    let employees: [Employee]
+    var employees: [Employee]
 }
 
 // MARK: - Employee
 struct Employee: Codable {
-    let name, phoneNumber: String
+    var name, phoneNumber: String
     let skills: [String]
 
     enum CodingKeys: String, CodingKey {

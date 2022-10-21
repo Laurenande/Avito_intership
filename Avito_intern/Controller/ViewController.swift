@@ -32,6 +32,8 @@ class ViewController: UIViewController{
                     self?.employeesTable.reloadData()
                     self?.indicator.stopAnimating()
                     self?.indicator.isHidden = true
+                    self?.dataSource[0].company.employees.sort(by: {$0.name < $1.name})
+                    
                 }
             case .failure(let error):
                     let alert = UIAlertController(title: "\(error.localizedDescription.description)",
